@@ -1,4 +1,4 @@
-module signallings
+module signaling
 
 go 1.17
 

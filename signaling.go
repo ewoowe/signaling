@@ -2,30 +2,29 @@ package main
 
 import (
 	"bufio"
-	"flag"
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"strings"
 )
 
 type Result struct {
-	Code int    		`json:"code"`
-	Msg  string 		`json:"msg"`
-	Data interface{} 	`json:"data"`
+	Code int         `json:"code"`
+	Msg  string      `json:"msg"`
+	Data interface{} `json:"data"`
 }
 
 type Node struct {
 	Value    string
 	Children []*Node
-	space	int
+	space    int
 }
 
 const (
-	ERROR 	= 1
+	ERROR   = 1
 	SUCCESS = 0
 )
 
-func convert(text string) (root Node){
+func convert(text string) (root Node) {
 	reader := strings.NewReader(text)
 	lineReader := bufio.NewReader(reader)
 	nodes := make([]Node, 0)
@@ -77,20 +76,15 @@ func space(s string) int {
 	return i
 }
 
-var path = "./"
-
 func main() {
-	flag.StringVar(&path, "dir", "./", "please input signal dirs")
-	flag.Parse()
-	Init(&path)
 	r := gin.Default()
 	r.GET("/:signalName", func(context *gin.Context) {
 		signalName := context.Param("signalName")
-		if Signallings[signalName] != "" {
+		if Signaling[signalName] != "" {
 			context.JSON(http.StatusOK, Result{
 				Code: SUCCESS,
 				Msg:  "查询成功",
-				Data: convert(Signallings[signalName]),
+				Data: convert(Signaling[signalName]),
 			})
 		} else {
 			context.JSON(http.StatusBadRequest, "请求的信令不存在！")
