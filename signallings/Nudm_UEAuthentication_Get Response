@@ -1,0 +1,48 @@
+HyperText Transfer Protocol 2
+    Stream: DATA, Stream ID: 1, Length 234
+        Length: 234
+        Type: DATA (0)
+        Flags: 0x01, End Stream
+            0000 .00. = Unused: 0x00
+            .... 0... = Padded: False
+            .... ...1 = End Stream: True
+        0... .... .... .... .... .... .... .... = Reserved: 0x0
+        .000 0000 0000 0000 0000 0000 0000 0001 = Stream Identifier: 1
+        [Pad Length: 0]
+        Data: 7b0a092261757468656e7469636174696f6e4d6574686f64223a092235475f414b41222c…
+    JavaScript Object Notation: application/json
+        Object
+            Member: authenticationMethod
+                [Path with value: /authenticationMethod:5G_AKA]
+                [Member with value: authenticationMethod:5G_AKA]
+                String value: 5G_AKA
+                Key: authenticationMethod
+                [Path: /authenticationMethod]
+            Member: encPermanentKey
+                [Path with value: /encPermanentKey:12345600000000000000000000000000]
+                [Member with value: encPermanentKey:12345600000000000000000000000000]
+                String value: 12345600000000000000000000000000
+                Key: encPermanentKey
+                [Path: /encPermanentKey]
+            Member: sequenceNumber
+                Object
+                    Member: sqn
+                        [Path with value: /sequenceNumber/sqn:000000000922]
+                        [Member with value: sqn:000000000922]
+                        String value: 000000000922
+                        Key: sqn
+                        [Path: /sequenceNumber/sqn]
+                Key: sequenceNumber
+                [Path: /sequenceNumber]
+            Member: authenticationManagementField
+                [Path with value: /authenticationManagementField:8000]
+                [Member with value: authenticationManagementField:8000]
+                String value: 8000
+                Key: authenticationManagementField
+                [Path: /authenticationManagementField]
+            Member: encOpcKey
+                [Path with value: /encOpcKey:12345600000000000000000000000000]
+                [Member with value: encOpcKey:12345600000000000000000000000000]
+                String value: 12345600000000000000000000000000
+                Key: encOpcKey
+                [Path: /encOpcKey]

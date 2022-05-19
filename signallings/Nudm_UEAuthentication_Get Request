@@ -1,0 +1,26 @@
+HyperText Transfer Protocol 2
+    Stream: DATA, Stream ID: 1, Length 120
+        Length: 120
+        Type: DATA (0)
+        Flags: 0x01, End Stream
+            0000 .00. = Unused: 0x00
+            .... 0... = Padded: False
+            .... ...1 = End Stream: True
+        0... .... .... .... .... .... .... .... = Reserved: 0x0
+        .000 0000 0000 0000 0000 0000 0000 0001 = Stream Identifier: 1
+        [Pad Length: 0]
+        Data: 7b0a092273657276696e674e6574776f726b4e616d65223a092235473a6d6e633031312e…
+    JavaScript Object Notation: application/json
+        Object
+            Member: servingNetworkName
+                [Path with value: /servingNetworkName:5G:mnc011.mcc460.3gppnetwork.org]
+                [Member with value: servingNetworkName:5G:mnc011.mcc460.3gppnetwork.org]
+                String value: 5G:mnc011.mcc460.3gppnetwork.org
+                Key: servingNetworkName
+                [Path: /servingNetworkName]
+            Member: ausfInstanceId
+                [Path with value: /ausfInstanceId:6c99a33e-c5d7-41ec-826d-b7d430cb6e4c]
+                [Member with value: ausfInstanceId:6c99a33e-c5d7-41ec-826d-b7d430cb6e4c]
+                String value: 6c99a33e-c5d7-41ec-826d-b7d430cb6e4c
+                Key: ausfInstanceId
+                [Path: /ausfInstanceId]

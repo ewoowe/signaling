@@ -1,0 +1,10 @@
+NR Radio Resource Control (RRC) protocol
+    UL-CCCH-Message
+        message: c1 (0)
+            c1: rrcSetupRequest (0)
+                rrcSetupRequest
+                    rrcSetupRequest
+                        ue-Identity: randomValue (1)
+                            randomValue: c2c94b89c0 [bit length 39, 1 LSB pad bits, 1100 0010  1100 1001  0100 1011  1000 1001  1100 000. decimal value 418300413152]
+                        establishmentCause: mo-Signalling (3)
+                        spare: 00 [bit length 1, 7 LSB pad bits, 0... .... decimal value 0]

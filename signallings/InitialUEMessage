@@ -1,0 +1,109 @@
+NG Application Protocol (InitialUEMessage)
+    NGAP-PDU: initiatingMessage (0)
+        initiatingMessage
+            procedureCode: id-InitialUEMessage (15)
+            criticality: ignore (1)
+            value
+                InitialUEMessage
+                    protocolIEs: 5 items
+                        Item 0: id-RAN-UE-NGAP-ID
+                            ProtocolIE-Field
+                                id: id-RAN-UE-NGAP-ID (85)
+                                criticality: reject (0)
+                                value
+                                    RAN-UE-NGAP-ID: 1
+                        Item 1: id-NAS-PDU
+                            ProtocolIE-Field
+                                id: id-NAS-PDU (38)
+                                criticality: reject (0)
+                                value
+                                    NAS-PDU: 7e004179000d0164f0110000000000000010102e0480f080f0
+                                        Non-Access-Stratum 5GS (NAS)PDU
+                                            Plain NAS 5GS Message
+                                                Extended protocol discriminator: 5G mobility management messages (126)
+                                                0000 .... = Spare Half Octet: 0
+                                                .... 0000 = Security header type: Plain NAS message, not security protected (0)
+                                                Message type: Registration request (0x41)
+                                                5GS registration type
+                                                    .... 1... = Follow-On Request bit (FOR): Follow-on request pending
+                                                    .... .001 = 5GS registration type: initial registration (1)
+                                                NAS key set identifier
+                                                    0... .... = Type of security context flag (TSC): Native security context (for KSIAMF)
+                                                    .111 .... = NAS key set identifier: 7
+                                                5GS mobile identity
+                                                    Length: 13
+                                                    0... .... = Spare: 0
+                                                    .000 .... = SUPI format: IMSI (0)
+                                                    .... 0... = Spare: 0
+                                                    .... .001 = Type of identity: SUCI (1)
+                                                    Mobile Country Code (MCC): China (460)
+                                                    Mobile Network Code (MNC): Unknown (11)
+                                                    Routing indicator: 0000
+                                                    .... 0000 = Protection scheme Id: NULL scheme (0)
+                                                    Home network public key identifier: 0
+                                                    MSIN: 0000000101
+                                                UE security capability
+                                                    Element ID: 0x2e
+                                                    Length: 4
+                                                    1... .... = 5G-EA0: Supported
+                                                    .0.. .... = 128-5G-EA1: Not supported
+                                                    ..0. .... = 128-5G-EA2: Not supported
+                                                    ...0 .... = 128-5G-EA3: Not supported
+                                                    .... 0... = 5G-EA4: Not supported
+                                                    .... .0.. = 5G-EA5: Not supported
+                                                    .... ..0. = 5G-EA6: Not supported
+                                                    .... ...0 = 5G-EA7: Not supported
+                                                    1... .... = 5G-IA0: Supported
+                                                    .1.. .... = 128-5G-IA1: Supported
+                                                    ..1. .... = 128-5G-IA2: Supported
+                                                    ...1 .... = 128-5G-IA3: Supported
+                                                    .... 0... = 5G-IA4: Not supported
+                                                    .... .0.. = 5G-IA5: Not supported
+                                                    .... ..0. = 5G-IA6: Not supported
+                                                    .... ...0 = 5G-IA7: Not supported
+                                                    1... .... = EEA0: Supported
+                                                    .0.. .... = 128-EEA1: Not supported
+                                                    ..0. .... = 128-EEA2: Not supported
+                                                    ...0 .... = 128-EEA3: Not supported
+                                                    .... 0... = EEA4: Not supported
+                                                    .... .0.. = EEA5: Not supported
+                                                    .... ..0. = EEA6: Not supported
+                                                    .... ...0 = EEA7: Not supported
+                                                    1... .... = EIA0: Supported
+                                                    .1.. .... = 128-EIA1: Supported
+                                                    ..1. .... = 128-EIA2: Supported
+                                                    ...1 .... = 128-EIA3: Supported
+                                                    .... 0... = EIA4: Not supported
+                                                    .... .0.. = EIA5: Not supported
+                                                    .... ..0. = EIA6: Not supported
+                                                    .... ...0 = EIA7: Not supported
+                        Item 2: id-UserLocationInformation
+                            ProtocolIE-Field
+                                id: id-UserLocationInformation (121)
+                                criticality: reject (0)
+                                value
+                                    UserLocationInformation: userLocationInformationNR (1)
+                                        userLocationInformationNR
+                                            nR-CGI
+                                                pLMNIdentity: 64f011
+                                                    Mobile Country Code (MCC): China (460)
+                                                    Mobile Network Code (MNC): Unknown (11)
+                                                nRCellIdentity: 0x0000000010
+                                            tAI
+                                                pLMNIdentity: 64f011
+                                                    Mobile Country Code (MCC): China (460)
+                                                    Mobile Network Code (MNC): Unknown (11)
+                                                tAC: 0 (0x000000)
+                                            timeStamp: e6148da4 (Apr 28, 2022 03:51:00 UTC)
+                        Item 3: id-RRCEstablishmentCause
+                            ProtocolIE-Field
+                                id: id-RRCEstablishmentCause (90)
+                                criticality: ignore (1)
+                                value
+                                    RRCEstablishmentCause: mo-Signalling (3)
+                        Item 4: id-UEContextRequest
+                            ProtocolIE-Field
+                                id: id-UEContextRequest (112)
+                                criticality: ignore (1)
+                                value
+                                    UEContextRequest: requested (0)

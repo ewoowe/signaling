@@ -1,0 +1,12 @@
+NR Radio Resource Control (RRC) protocol
+    DL-CCCH-Message
+        message: c1 (0)
+            c1: rrcSetup (1)
+                rrcSetup
+                    rrc-TransactionIdentifier: 1
+                    criticalExtensions: rrcSetup (0)
+                        rrcSetup
+                            radioBearerConfig
+                            masterCellGroup: 0000
+                                CellGroupConfig
+                                    cellGroupId: 0

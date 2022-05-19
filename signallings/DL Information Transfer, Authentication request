@@ -1,0 +1,32 @@
+NR Radio Resource Control (RRC) protocol
+    DL-DCCH-Message
+        message: c1 (0)
+            c1: dlInformationTransfer (5)
+                dlInformationTransfer
+                    rrc-TransactionIdentifier: 0
+                    criticalExtensions: dlInformationTransfer (0)
+                        dlInformationTransfer
+                            dedicatedNAS-Message: 7e0056000200002100128493e128a96632140b380e3418d220100706aba11fb680008db2…
+                                Non-Access-Stratum 5GS (NAS)PDU
+                                    Plain NAS 5GS Message
+                                        Extended protocol discriminator: 5G mobility management messages (126)
+                                        0000 .... = Spare Half Octet: 0
+                                        .... 0000 = Security header type: Plain NAS message, not security protected (0)
+                                        Message type: Authentication request (0x56)
+                                        0000 .... = Spare Half Octet: 0
+                                        NAS key set identifier - ngKSI
+                                            .... 0... = Type of security context flag (TSC): Native security context (for KSIAMF)
+                                            .... .000 = NAS key set identifier: 0
+                                        ABBA
+                                            Length: 2
+                                            ABBA Contents: 0000
+                                        Authentication Parameter RAND - 5G authentication challenge
+                                            Element ID: 0x21
+                                            RAND value: 00128493e128a96632140b380e3418d2
+                                        Authentication Parameter AUTN (UMTS and EPS authentication challenge) - 5G authentication challenge
+                                            Element ID: 0x20
+                                            Length: 16
+                                            AUTN value: 0706aba11fb680008db249e123cfb26b
+                                                SQN xor AK: 0706aba11fb6
+                                                AMF: 8000
+                                                MAC: 8db249e123cfb26b

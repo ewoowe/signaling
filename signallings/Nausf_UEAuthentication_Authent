@@ -1,0 +1,32 @@
+HyperText Transfer Protocol 2
+    Stream: DATA, Stream ID: 3, Length 154
+        Length: 154
+        Type: DATA (0)
+        Flags: 0x01, End Stream
+            0000 .00. = Unused: 0x00
+            .... 0... = Padded: False
+            .... ...1 = End Stream: True
+        0... .... .... .... .... .... .... .... = Reserved: 0x0
+        .000 0000 0000 0000 0000 0000 0000 0011 = Stream Identifier: 3
+        [Pad Length: 0]
+        Data: 7b0a092261757468526573756c74223a092241555448454e5449434154494f4e5f535543…
+    JavaScript Object Notation: application/json
+        Object
+            Member: authResult
+                [Path with value: /authResult:AUTHENTICATION_SUCCESS]
+                [Member with value: authResult:AUTHENTICATION_SUCCESS]
+                String value: AUTHENTICATION_SUCCESS
+                Key: authResult
+                [Path: /authResult]
+            Member: supi
+                [Path with value: /supi:imsi-460110000000101]
+                [Member with value: supi:imsi-460110000000101]
+                String value: imsi-460110000000101
+                Key: supi
+                [Path: /supi]
+            Member: kseaf
+                [Path with value: /kseaf:2a4669601f7fb56a0373c12c18322b3c5af7300f588c02e2cf89c554c8964a4c]
+                [Member with value: kseaf:2a4669601f7fb56a0373c12c18322b3c5af7300f588c02e2cf89c554c8964a4c]
+                String value: 2a4669601f7fb56a0373c12c18322b3c5af7300f588c02e2cf89c554c8964a4c
+                Key: kseaf
+                [Path: /kseaf]

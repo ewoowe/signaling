@@ -1,0 +1,54 @@
+NG Application Protocol (UplinkNASTransport)
+    NGAP-PDU: initiatingMessage (0)
+        initiatingMessage
+            procedureCode: id-UplinkNASTransport (46)
+            criticality: ignore (1)
+            value
+                UplinkNASTransport
+                    protocolIEs: 4 items
+                        Item 0: id-AMF-UE-NGAP-ID
+                            ProtocolIE-Field
+                                id: id-AMF-UE-NGAP-ID (10)
+                                criticality: reject (0)
+                                value
+                                    AMF-UE-NGAP-ID: 11
+                        Item 1: id-RAN-UE-NGAP-ID
+                            ProtocolIE-Field
+                                id: id-RAN-UE-NGAP-ID (85)
+                                criticality: reject (0)
+                                value
+                                    RAN-UE-NGAP-ID: 1
+                        Item 2: id-NAS-PDU
+                            ProtocolIE-Field
+                                id: id-NAS-PDU (38)
+                                criticality: reject (0)
+                                value
+                                    NAS-PDU: 7e00572d105c9539ce0e1fc28961efbe6a2bfaab61
+                                        Non-Access-Stratum 5GS (NAS)PDU
+                                            Plain NAS 5GS Message
+                                                Extended protocol discriminator: 5G mobility management messages (126)
+                                                0000 .... = Spare Half Octet: 0
+                                                .... 0000 = Security header type: Plain NAS message, not security protected (0)
+                                                Message type: Authentication response (0x57)
+                                                Authentication response parameter
+                                                    Element ID: 0x2d
+                                                    Length: 16
+                                                    RES: 5c9539ce0e1fc28961efbe6a2bfaab61
+                        Item 3: id-UserLocationInformation
+                            ProtocolIE-Field
+                                id: id-UserLocationInformation (121)
+                                criticality: ignore (1)
+                                value
+                                    UserLocationInformation: userLocationInformationNR (1)
+                                        userLocationInformationNR
+                                            nR-CGI
+                                                pLMNIdentity: 64f011
+                                                    Mobile Country Code (MCC): China (460)
+                                                    Mobile Network Code (MNC): Unknown (11)
+                                                nRCellIdentity: 0x0000000010
+                                            tAI
+                                                pLMNIdentity: 64f011
+                                                    Mobile Country Code (MCC): China (460)
+                                                    Mobile Network Code (MNC): Unknown (11)
+                                                tAC: 0 (0x000000)
+                                            timeStamp: e6148da4 (Apr 28, 2022 03:51:00 UTC)
